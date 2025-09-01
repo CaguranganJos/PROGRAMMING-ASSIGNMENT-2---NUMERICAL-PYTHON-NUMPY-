@@ -20,7 +20,7 @@ In Python, element-wise mean and element-wise standard deviation can be obtained
 In this problem, create a random 5 x 5 ndarray and store it to variable X. Normalize X. Save your normalized
 ndarray as X_normalized.npy
 
-### Entire Code:
+#### Entire Code:
 ```python
 import numpy as np
 
@@ -31,7 +31,7 @@ X_std = X.std()
 Z = (X - X_mean)/X_std
 np.save("X_normalized.npy", Z)
 ```
-### Step-by-step Thought Process
+#### Step-by-step Thought Process
 1. The most important thing to do first is to import the library numpy, as I will be needing its functions, such as arrays in this code.
 ```python
 import numpy as np
@@ -53,7 +53,7 @@ Instruction:
 Create the following 10 x 10 ndarray. Which are the squares of the first 100 positive integers.
 From this ndarray, determine all the elements that are divisible by 3. Save the result as div_by_3.npy
 
-### Entire Code: 
+#### Entire Code: 
 ```python
 import numpy as np 
 
@@ -66,10 +66,31 @@ result = num_array[div_by_3]
 np.save("div_by_3.npy", result) 
 ```
 
-### Step-by-step Thought Process
-1. First, is to import the library numpy as np, which we will be needing its functions in this code.
+#### Step-by-step Thought Process
+1. First, I imported the library numpy as np, which we will need for its functions in this code.
 ```python
 import numpy as np 
+```
+2. I then needed my main array to manipulate. I used "np.arrange()" to make a 1 one-dimensional array consisting of the first 100 digits and store it in "num".
+```python
+num = np.arange(1,101) 
+```
+3. Then, I squared the array element-wise and stored it in "sqr_num". I then reshape the "sqr_num", containing the squared elements from the original array, into a 10x10 array.
+```python
+sqr_num = num**2 
+num_array = sqr_num.reshape(10,10) 
+```
+4. Now that I have the array of the squares of the first 100 positive integers, I used a method called "boolean mask", I set a modulo condition that every element inside the array is divided by 3, where the remainder should be equal to 0, and all the digits with 0 remainders will have a value of "true", and the numbers with no 0 remainders will have a value of "false". 
+```python
+div_by_3 = num_array % 3 == 0 
+```
+5. Then, I stored the numbers with the value "true" in "result". This means that all digits that have a 0 remainder when divided by 3 are stored inside "results".
+```python
+result = num_array[div_by_3]
+```
+6. I now saved "result" containing all the squares of the first 100 positive integers that are divisible by 3 and named the file "div_by_3.npy". 
+```python
+np.save("div_by_3.npy", result) 
 ```
 
 
