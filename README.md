@@ -1,12 +1,19 @@
 # PROGRAMMING-ASSIGNMENT-2---NUMERICAL-PYTHON-NUMPY-
 > deadline: September 3, 2025
 
+&nbsp;
+
+
 ## Table of Contents:
   1. Programming Assignment 2.1: Normalization Problem
   2. Programming Assignment 2.2: Divisible by 3 Problem
+  3. Author
+
+&nbsp;
+
 
 ## Programming Assignment 2.1: Normalization Problem 
-Instructions:
+`Instructions:`
 Normalization is one of the most basic preprocessing techniques in
 data analytics. This involves centering and scaling process. Centering means subtracting the data from the
 mean and scaling means dividing with its standard deviation. Mathematically, normalization can be
@@ -48,8 +55,11 @@ Z = (X - X_mean)/X_std
 np.save("X_normalized.npy", Z)
 ```
 
+&nbsp;
+
+
 ## Programming Assignment 2.2: Divisible by 3 Problem
-Instruction:
+`Instruction:`
 Create the following 10 x 10 ndarray. Which are the squares of the first 100 positive integers.
 From this ndarray, determine all the elements that are divisible by 3. Save the result as div_by_3.npy
 
@@ -93,6 +103,8 @@ result = num_array[div_by_3]
 np.save("div_by_3.npy", result) 
 ```
 
+
+&nbsp;
 
 ## Author:
 Name: Cagurangan, Jos Kendrick L.
